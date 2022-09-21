@@ -1,5 +1,3 @@
-# digital-electronics-2-2022
-
 /***********************************************************************
  * 
  * Blink a LED in Arduino-style and use function from the delay library.
@@ -15,7 +13,9 @@
 /* Defines -----------------------------------------------------------*/
 #define LED_GREEN PB5   // PB5 is AVR pin where green on-board LED 
                         // is connected
-#define SHORT_DELAY 250 // Delay in milliseconds
+#define SHORT_DELAY1 250 // Delay in milliseconds
+#define SHORT_DELAY2 500
+#define SHORT_DELAY3 1000
 #define LED_out PB0   // PB5 is AVR pin where green on-board LED 
                         // is connected
 #define SHORT_DELAY 250 // Delay in milliseconds
@@ -38,11 +38,9 @@
 
 
 /* Function definitions ----------------------------------------------*/
-/**********************************************************************
- * Function: Main function where the program execution begins
- * Purpose:  Toggle one LED and use delay library.
- * Returns:  none
- **********************************************************************/
+/* TOGGLE LEDS -------------------------------------------------------*/
+
+/***********************************************************************************************************************************
 int main(void)
 {
     uint8_t led_value = LOW;  // Local variable to keep LED status
@@ -72,3 +70,52 @@ int main(void)
     // Will never reach this
     return 0;
 }
+
+**********************************************************************************************************************************/
+// Lab 1: JAN GROSS
+
+// Morse code
+
+//1. Listing of C code which repeats one "dot" and one "comma" (BTW, in Morse code it is letter `A`) on a LED. Always use syntax highlighting, meaningful comments, and follow C guidelines:
+
+
+int main(void)
+{
+    uint8_t led_out = LOW;  // Local variable to keep LED status
+
+    // Set pin where on-board LED is connected as output
+    pinMode(LED_out, OUTPUT);
+
+    // Infinite loop
+    while (1)
+    {
+        // Generate a lettre `A` Morse code
+
+        if (led_out == LOW)
+            led_out = HIGH;
+        digitalWrite(LED_out, led_out);
+        _delay_ms(SHORT_DELAY1); //250
+
+        if (led_out == HIGH)
+            led_out = LOW;
+        digitalWrite(LED_out, led_out);
+        _delay_ms(SHORT_DELAY1);//250
+
+        if (led_out == LOW)
+            led_out = HIGH;
+        digitalWrite(LED_out, led_out);
+        _delay_ms(SHORT_DELAY2);//500
+
+        if (led_out == HIGH)
+            led_out = LOW;
+        digitalWrite(LED_out, led_out);
+        _delay_ms(SHORT_DELAY3);//1000
+
+    }
+
+    // Will never reach this
+    return 0;
+}
+
+
+//2. Scheme of Morse code application, i.e. connection of AVR device, LED, resistor, and supply voltage. The image can be drawn on a computer or by hand. Always name all components and their values!
