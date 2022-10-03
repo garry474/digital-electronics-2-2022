@@ -9,7 +9,7 @@
    | `uint16_t` | 16 | 0 .. 65,535 | unsigned short |
    | `int16_t`  | 16 | -32,768 .. 32,767 | short |
    | `float`    | 32 | -3.4e+38, ..., 3.4e+38 | Single-precision floating-point |
-   | `void`     | Void means without any value. void data type represents a valueless entity. A void data type is used for those function which does not return a value.  |  |  |
+   | `void`     | 0  | null |  |
 
 <a name="part1"></a>
 
