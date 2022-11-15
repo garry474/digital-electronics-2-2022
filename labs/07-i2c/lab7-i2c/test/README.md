@@ -10,7 +10,7 @@
    * SPI pins
    * external interrupt pins INT0, INT1
 
-   ![your figure](images/arduino_uno_pinout.png)
+   ![your figure](https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/07-i2c/images/schematic.png)
 
 ### I2C communication
 
@@ -24,4 +24,4 @@ Consider an application for temperature and humidity measurements. Use sensor DH
 
 3. Draw a flowchart of `TIMER1_OVF_vect` (which overflows every 1&nbsp;sec) for such Meteo station. The image can be drawn on a computer or by hand. Use clear description of individual algorithm steps.
 
-   ![your figure]()
+   ![your figure](https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/07-i2c/images/flowchart.png)
