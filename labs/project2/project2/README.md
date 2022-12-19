@@ -11,7 +11,11 @@ Servo 9G SG90 has 3 pins, Vcc, GND, and signal. To control the servo we send a d
 
 By changing the duty cycle by small increments we can precisely control the angle of the servo. We need however to send the given signal repeatedly until the servo meets the set angle, than the servo stops even when we repeat it. 
 
-![](https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/project2/project2/images/Servo-Motor-Working-Animation.gif) [gif source](https://lastminuteengineers.com/servo-motor-arduino-tutorial/)
+[gif source](https://lastminuteengineers.com/servo-motor-arduino-tutorial/)
+
+![](https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/project2/project2/images/Servo-Motor-Working-Animation.gif) 
+
+
 
 **Circuit connections**
 
