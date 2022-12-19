@@ -23,7 +23,7 @@
 #include <util/delay.h> // Functions for busy-wait delay loops
 
 #include "Arduino.h"
-#define PB5 5          // In Arduino world, PB5 is called "13"
+#define PB5 5          // In Arduino world, PB5 
 #define PB5 6
 
 
@@ -31,10 +31,10 @@
 int main(void)
 {
 
-    uint8_t servo1_out = LOW;  // Local variable to keep LED status
+    uint8_t servo1_out = LOW;  // Local variable to keep SERVO status
     uint8_t servo2_out = LOW;
     float duty = 1;
-    // Set pin where on-board LED is connected as output
+    // Set pin where on-board SERVO is connected as output
     pinMode(SERVO1_out, OUTPUT);
     pinMode(SERVO2_out, OUTPUT);
     
@@ -78,10 +78,10 @@ int main(void)
 
 void set_servo2(float duty)
 {
-  uint8_t servo1_out = LOW;  // Local variable to keep LED status
+  uint8_t servo1_out = LOW;  
     uint8_t servo2_out = LOW;
     
-    // Set pin where on-board LED is connected as output
+    // Set pin where on-board SERVO is connected as output
     pinMode(SERVO1_out, OUTPUT);
     pinMode(SERVO2_out, OUTPUT);
 
@@ -104,14 +104,7 @@ void set_servo2(float duty)
     }
      return 0;
 }
-     /*
-        servo1_out = HIGH;
-        digitalWrite(SERVO1_out, servo1_out);
-        _delay_ms(duty);
-        servo1_out = LOW;
-        digitalWrite(SERVO1_out, servo1_out);
-        _delay_ms(20-duty);
-        */
+     
       /*
       for (size_t i = 0; i < 20; i++)
         {
@@ -133,48 +126,6 @@ void set_servo2(float duty)
         _delay_ms(18);
         }
         */
-/*
-    for (size_t i = 0; i < 100; i++)
-        {
-          led_out = HIGH;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(1);
-        led_out = LOW;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(19);
-        }
-        
-        for (size_t i = 0; i < 100; i++)
-        {
-          led_out = HIGH;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(2);
-        led_out = LOW;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(18);
-        }*/
 
-
-        /*
-        for (size_t i = 0; i < 20; i++)
-        {
-          led_out = HIGH;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(1);
-        led_out = LOW;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(19);
-        }
-        
-        for (size_t i = 0; i < 20; i++)
-        {
-          led_out = HIGH;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(2);
-        led_out = LOW;
-        digitalWrite(LED_out, led_out);
-        _delay_ms(18);
-        }
-       */
 
 
