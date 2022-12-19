@@ -33,7 +33,7 @@ digitalWrite(SERVO1_out, servo1_out); //send LOW to servo
 _delay_ms(20-duty);                   //wait for period minus duty time
 ```
 
-I managed to move the servo back and forth with "for" functions.
+I managed to move the servos back and forth with "for" functions.
 ```
 for (size_t i = 0; i < 50; i++)
 {
