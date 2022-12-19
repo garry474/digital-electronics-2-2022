@@ -17,12 +17,14 @@
 
 
 #define SERVO1_out PD5   
+#define SERVO2_out PD6
 
 #include <avr/io.h>     // AVR device-specific IO definitions
 #include <util/delay.h> // Functions for busy-wait delay loops
 
 #include "Arduino.h"
 #define PB5 5          // In Arduino world, PB5 is called "13"
+#define PB5 6
 
 
 
@@ -30,38 +32,86 @@ int main(void)
 {
 
     uint8_t servo1_out = LOW;  // Local variable to keep LED status
-    uint8_t x = 1;
-    float duty = 2;
+    uint8_t servo2_out = LOW;
+    float duty = 1;
     // Set pin where on-board LED is connected as output
     pinMode(SERVO1_out, OUTPUT);
+    pinMode(SERVO2_out, OUTPUT);
+    
     while (1)
     {
-      if (x==1)
-      {
-        duty = duty-0.1;
-        _delay_ms(100);
-      }
-      if (x==2)
-      {
-        duty = duty-0.1;
-        _delay_ms(100);
-      }
-       
-      
-
+      duty=2;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.1;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.2;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.3;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.4;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.5;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.6;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.7;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.8;
+      _delay_ms(500);
+      set_servo2(duty);
+      duty=1.9;
+      _delay_ms(500);
+      set_servo2(duty);
     }
     
-  
+    
+    return 0;
+}
+
+void set_servo2(float duty)
+{
+  uint8_t servo1_out = LOW;  // Local variable to keep LED status
+    uint8_t servo2_out = LOW;
+    
+    // Set pin where on-board LED is connected as output
+    pinMode(SERVO1_out, OUTPUT);
+    pinMode(SERVO2_out, OUTPUT);
 
     while (1)
     {
+      servo1_out = HIGH;
+      digitalWrite(SERVO1_out, servo1_out);
+      _delay_ms(duty);
+      servo1_out = LOW;
+      digitalWrite(SERVO1_out, servo1_out);
+      _delay_ms(20-duty);
+
+      servo2_out = HIGH;
+      digitalWrite(SERVO2_out, servo2_out);
+      _delay_ms(duty);
+      servo2_out = LOW;
+      digitalWrite(SERVO2_out, servo2_out);
+      _delay_ms(20-duty);
+      
+    }
+     return 0;
+}
+     /*
         servo1_out = HIGH;
         digitalWrite(SERVO1_out, servo1_out);
         _delay_ms(duty);
         servo1_out = LOW;
         digitalWrite(SERVO1_out, servo1_out);
         _delay_ms(20-duty);
-
+        */
       /*
       for (size_t i = 0; i < 20; i++)
         {
@@ -83,15 +133,6 @@ int main(void)
         _delay_ms(18);
         }
         */
-
-    }
-    return 0;
-
-}
-
-
-
- 
 /*
     for (size_t i = 0; i < 100; i++)
         {
