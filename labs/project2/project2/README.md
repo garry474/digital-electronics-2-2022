@@ -19,7 +19,7 @@ By changing the duty cycle by small increments we can precisely control the angl
 
 **Circuit connections**
 
-<img src="https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/project2/project2/images/schem1.png" width=60% height=60%>
+<img src="https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/project2/project2/images/schem3.png" width=60% height=60%>
 
 ## Software description
 
@@ -60,11 +60,14 @@ for (size_t i = 0; i < 50; i++)
 }
 ```
 
-
-
 **Flow chart**
 
 <img src="https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/project2/project2/images/Diagram1.png" width=10% height=10%>
+
+**Theoretical Flow chart of joystick controls of two servos**
+
+<img src="https://github.com/garry474/digital-electronics-2-2022/blob/main/labs/project2/project2/images/schem4.png" width=50% height=50%>
+
 
 ## References
 
